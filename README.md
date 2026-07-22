@@ -12,6 +12,7 @@ Supported readers:
 ## Build
 
 ```bash
+cd read_wsi
 git clone https://github.com/anxuanhan/read_wsi.git
 docker build -t read-wsi:latest .
 ```

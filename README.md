@@ -9,25 +9,50 @@ Supported readers:
 - SVS / NDPI / pyramidal TIFF: OpenSlide
 - ordinary TIFF fallback: `tifffile`
 
-## Build
+
+## Installation
+
+Clone the repository:
 
 ```bash
-cd read_wsi
 git clone https://github.com/anxuanhan/read_wsi.git
+cd read_wsi
+```
+
+> **Important:** Make sure Docker is running before building the image.
+
+### Build the Docker image
+
+#### macOS with Apple Silicon
+
+```bash
+docker build --platform linux/amd64 -t read-wsi:latest .
+```
+
+#### Other platforms
+
+```bash
 docker build -t read-wsi:latest .
 ```
 
-## Run A Local Image
+### Run the application
 
 ```bash
 docker run --rm -p 8000:8000 read-wsi:latest
 ```
 
-Open:
+Open the following address in your browser:
 
 ```text
-http://127.0.0.1:8000
+http://localhost:8000
 ```
+
+To stop the application, press `Ctrl+C` in the terminal.
+
+
+
+
+
 
 ## Upload Your Image
 Open the web page, choose or drag a WSI file, and click Upload.

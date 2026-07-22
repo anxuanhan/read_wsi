@@ -1,4 +1,5 @@
 # WSI Thumbnail Viewer
+<img width="1032" height="554" alt="Snipaste_2026-07-22_13-49-05" src="https://github.com/user-attachments/assets/81d82222-a602-41c9-a7d4-1effc906dc2c" />
 
 FastAPI app for uploading a whole-slide image and returning a thumbnail plus a short metadata summary.
 
@@ -11,8 +12,7 @@ Supported readers:
 ## Build
 
 ```bash
-git clone https://github.com/your-github-user/read-wsi.git
-cd read-wsi
+git clone https://github.com/anxuanhan/read_wsi.git
 docker build -t read-wsi:latest .
 ```
 
@@ -28,41 +28,8 @@ Open:
 http://127.0.0.1:8000
 ```
 
-## Run From Docker Hub
+## Upload your Image
+<img width="1072" height="648" alt="Snipaste_2026-07-22_13-49-55" src="https://github.com/user-attachments/assets/468038ee-bd3d-4a4e-b753-75c756153df0" />
 
-After publishing the image, users can run:
+<img width="1039" height="694" alt="Snipaste_2026-07-22_13-50-14" src="https://github.com/user-attachments/assets/9724083d-adc8-4b21-9124-2cd1e423f0a6" />
 
-```bash
-docker run --rm -p 8000:8000 your-dockerhub-user/read-wsi:latest
-```
-
-## Keep Uploaded Files And Outputs
-
-```bash
-mkdir -p ./read_wsi_runtime/uploads
-mkdir -p ./read_wsi_runtime/outputs
-
-docker run --rm -p 8000:8000 \
-  -v "$(pwd)/read_wsi_runtime/uploads:/app/uploads" \
-  -v "$(pwd)/read_wsi_runtime/outputs:/app/outputs" \
-  read-wsi:latest
-```
-
-## Run With Docker Compose
-
-```bash
-docker compose up --build
-```
-
-This maps:
-
-- `./uploads` -> `/app/uploads`
-- `./outputs` -> `/app/outputs`
-
-so uploaded slides and generated thumbnails remain available on the host.
-
-## Health Check
-
-```bash
-curl http://127.0.0.1:8000/health
-```

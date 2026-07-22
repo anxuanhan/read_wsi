@@ -1,0 +1,10 @@
+services:
+  read-wsi:
+    build: .
+    image: read-wsi:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./outputs:/app/outputs
+    restart: unless-stopped

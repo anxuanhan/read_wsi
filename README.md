@@ -28,7 +28,8 @@ Open:
 http://127.0.0.1:8000
 ```
 
-## Upload your Image
+## Upload Your Image
+Open the web page, choose or drag a WSI file, and click Upload.
 <img width="1072" height="648" alt="Snipaste_2026-07-22_13-49-55" src="https://github.com/user-attachments/assets/468038ee-bd3d-4a4e-b753-75c756153df0" />
 
 <img width="1039" height="694" alt="Snipaste_2026-07-22_13-50-14" src="https://github.com/user-attachments/assets/9724083d-adc8-4b21-9124-2cd1e423f0a6" />
